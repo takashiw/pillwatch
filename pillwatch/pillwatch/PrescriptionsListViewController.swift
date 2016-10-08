@@ -11,6 +11,9 @@ import UIKit
 class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var prescriptionsList: [Prescription]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +22,12 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
-        // Do any additional setup after loading the view.
+        //Template Info
+        let templatePrescription = Prescription(name: "Advil", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
+        let templatePrescription2 = Prescription(name: "Aleve", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 12)
+        
+        prescriptionsList?.append(templatePrescription)
+        prescriptionsList?.append(templatePrescription2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,5 +59,23 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 //        var vc = segue.destinationViewController as! PrescriptionDetailsViewController
 //        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
 //        
+    }
+}
+
+class Prescription {
+    var name: String?
+    var remainingCount: Int?
+    var totalCount: Int?
+    var firstTimeTaken: NSDate?
+    var itemsPerDosage: Int?
+    var frequencyInHours: Int?
+    
+    init(name: String, totalCount: Int, firstTimeTaken: NSDate, itemsPerDosage: Int, frequencyInHours: Int) {
+        self.name = name
+        self.totalCount = totalCount
+        self.remainingCount = self.totalCount
+        self.firstTimeTaken = firstTimeTaken
+        self.itemsPerDosage = itemsPerDosage
+        self.frequencyInHours = frequencyInHours
     }
 }
