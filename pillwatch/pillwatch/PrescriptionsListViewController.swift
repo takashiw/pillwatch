@@ -16,6 +16,8 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         // Do any additional setup after loading the view.
     }
@@ -40,14 +42,14 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 
     
 
-    /*
-    // MARK: - Navigation
+//     MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destinationViewController.
+//         Pass the selected object to the new view controller.
+//        var vc = segue.destinationViewController as! PrescriptionDetailsViewController
+//        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+//        
     }
-    */
-
 }
