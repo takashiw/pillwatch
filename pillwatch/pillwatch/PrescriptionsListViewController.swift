@@ -120,10 +120,12 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! PrescriptionDetailsViewController
-        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-        
-        vc.passedPrescription = prescriptionsList![indexPath!.row]
+        if(segue.identifier == "detailSegue"){
+            var vc = segue.destinationViewController as! PrescriptionDetailsViewController
+            var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            
+            vc.passedPrescription = prescriptionsList![indexPath!.row]
+        }
 //
     }
 }
