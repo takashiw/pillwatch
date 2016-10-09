@@ -12,6 +12,8 @@ class PrescriptionDetailsViewController: UIViewController {
     
     var passedPrescription: Prescription!
 
+    @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var doseView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -36,7 +38,20 @@ class PrescriptionDetailsViewController: UIViewController {
         var percentageUsed = Double(passedPrescription.remainingCount!) / Double(passedPrescription.totalCount!)
         
         self.progressPillsView.transform = CGAffineTransformMakeScale(1, CGFloat(percentageUsed))
-
+        
+        self.nameView.layer.cornerRadius = 4
+        
+        self.nameView.layer.shadowColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0).CGColor
+        self.nameView.layer.shadowRadius = 2.5
+        self.nameView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.nameView.layer.shadowOpacity = 0.25
+        
+        self.doseView.layer.cornerRadius = 4
+        self.doseView.layer.shadowColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0).CGColor
+        self.doseView.layer.shadowRadius = 2.5
+        self.doseView.layer.shadowOffset = CGSize.zero
+        self.doseView.layer.shadowOpacity = 0.25
+        
         // Do any additional setup after loading the view.
     }
 
@@ -46,14 +61,14 @@ class PrescriptionDetailsViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var vc = segue.destinationViewController as! DoseViewController
+        
+        vc.passedPrescription = self.passedPrescription
     }
-    */
+
 
 }

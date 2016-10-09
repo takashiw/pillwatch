@@ -15,6 +15,7 @@
 		16D381091DA93AA300AA3C76 /* PrescriptionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D381081DA93AA300AA3C76 /* PrescriptionsListViewController.swift */; };
 		16D3810B1DA93BF100AA3C76 /* PrescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3810A1DA93BF100AA3C76 /* PrescriptionViewCell.swift */; };
 		16D3810D1DA95E4900AA3C76 /* PrescriptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3810C1DA95E4900AA3C76 /* PrescriptionDetailsViewController.swift */; };
+		16D3810F1DA9BF2200AA3C76 /* DoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3810E1DA9BF2200AA3C76 /* DoseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		16D381081DA93AA300AA3C76 /* PrescriptionsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionsListViewController.swift; sourceTree = "<group>"; };
 		16D3810A1DA93BF100AA3C76 /* PrescriptionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionViewCell.swift; sourceTree = "<group>"; };
 		16D3810C1DA95E4900AA3C76 /* PrescriptionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionDetailsViewController.swift; sourceTree = "<group>"; };
+		16D3810E1DA9BF2200AA3C76 /* DoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoseViewController.swift; path = ../DoseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		16D380F31DA92FAC00AA3C76 /* pillwatch */ = {
 			isa = PBXGroup;
 			children = (
+				16D3810E1DA9BF2200AA3C76 /* DoseViewController.swift */,
 				16D380F41DA92FAC00AA3C76 /* AppDelegate.swift */,
 				16D380F61DA92FAC00AA3C76 /* ViewController.swift */,
 				16D380F81DA92FAC00AA3C76 /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D3810D1DA95E4900AA3C76 /* PrescriptionDetailsViewController.swift in Sources */,
+				16D3810F1DA9BF2200AA3C76 /* DoseViewController.swift in Sources */,
 				16D381091DA93AA300AA3C76 /* PrescriptionsListViewController.swift in Sources */,
 				16D380F71DA92FAC00AA3C76 /* ViewController.swift in Sources */,
 				16D3810B1DA93BF100AA3C76 /* PrescriptionViewCell.swift in Sources */,

@@ -21,6 +21,8 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         tableView.dataSource = self
         tableView.delegate = self
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0)
+        
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         //Template Info
@@ -114,8 +116,6 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//         Get the new view controller using segue.destinationViewController.
-//         Pass the selected object to the new view controller.
         var vc = segue.destinationViewController as! PrescriptionDetailsViewController
         var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
         
