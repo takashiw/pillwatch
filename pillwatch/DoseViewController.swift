@@ -17,6 +17,7 @@ class DoseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
         self.instructionLabel.text = "Please take " + String(passedPrescription.itemsPerDosage!) + " pills"
     }
