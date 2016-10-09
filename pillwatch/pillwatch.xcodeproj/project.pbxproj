@@ -19,6 +19,8 @@
 		16D381111DA9DA8C00AA3C76 /* AddPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D381101DA9DA8C00AA3C76 /* AddPrescriptionViewController.swift */; };
 		16D381131DAA04D900AA3C76 /* FrequencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D381121DAA04D900AA3C76 /* FrequencyViewController.swift */; };
 		16D381151DAA251C00AA3C76 /* meds.json in Resources */ = {isa = PBXBuildFile; fileRef = 16D381141DAA251C00AA3C76 /* meds.json */; };
+		16D3811D1DAA958000AA3C76 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3811C1DAA958000AA3C76 /* NameTableViewCell.swift */; };
+		16D381211DAA967500AA3C76 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D381201DAA967500AA3C76 /* NameViewController.swift */; };
 		972DBCF9908780FA60504209 /* Pods_pillwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65460D95CB0ED2D47BD4BA52 /* Pods_pillwatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		16D381101DA9DA8C00AA3C76 /* AddPrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPrescriptionViewController.swift; sourceTree = "<group>"; };
 		16D381121DAA04D900AA3C76 /* FrequencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyViewController.swift; sourceTree = "<group>"; };
 		16D381141DAA251C00AA3C76 /* meds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meds.json; sourceTree = "<group>"; };
+		16D3811C1DAA958000AA3C76 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameTableViewCell.swift; path = ../Pods/NameTableViewCell.swift; sourceTree = "<group>"; };
+		16D381201DAA967500AA3C76 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		65460D95CB0ED2D47BD4BA52 /* Pods_pillwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pillwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		967551B9064343F5A01DE25F /* Pods-pillwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pillwatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pillwatch/Pods-pillwatch.debug.xcconfig"; sourceTree = "<group>"; };
 		988A5FB96E682DD55D2C8C5D /* Pods-pillwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pillwatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-pillwatch/Pods-pillwatch.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +91,9 @@
 				16D3810A1DA93BF100AA3C76 /* PrescriptionViewCell.swift */,
 				16D380FB1DA92FAC00AA3C76 /* Assets.xcassets */,
 				16D380FD1DA92FAC00AA3C76 /* LaunchScreen.storyboard */,
+				16D3811C1DAA958000AA3C76 /* NameTableViewCell.swift */,
 				16D381001DA92FAC00AA3C76 /* Info.plist */,
+				16D381201DAA967500AA3C76 /* NameViewController.swift */,
 			);
 			path = pillwatch;
 			sourceTree = "<group>";
@@ -237,10 +243,12 @@
 				16D381131DAA04D900AA3C76 /* FrequencyViewController.swift in Sources */,
 				16D381111DA9DA8C00AA3C76 /* AddPrescriptionViewController.swift in Sources */,
 				16D3810F1DA9BF2200AA3C76 /* DoseViewController.swift in Sources */,
+				16D3811D1DAA958000AA3C76 /* NameTableViewCell.swift in Sources */,
 				16D381091DA93AA300AA3C76 /* PrescriptionsListViewController.swift in Sources */,
 				16D380F71DA92FAC00AA3C76 /* ViewController.swift in Sources */,
 				16D3810B1DA93BF100AA3C76 /* PrescriptionViewCell.swift in Sources */,
 				16D380F51DA92FAC00AA3C76 /* AppDelegate.swift in Sources */,
+				16D381211DAA967500AA3C76 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

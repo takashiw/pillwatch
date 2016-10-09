@@ -103,8 +103,17 @@ class AddPrescriptionViewController: UIViewController, UITextFieldDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! FrequencyViewController
+        if(segue.identifier == "dosageSegue"){
+            var vc = segue.destinationViewController as! FrequencyViewController
+            
+            vc.addingViewController = self
+        }
         
-        vc.addingViewController = self
+        if(segue.identifier == "nameSegue"){
+            var vc = segue.destinationViewController as! NameViewController
+            
+            vc.addingViewController = self
+        }
+
     }
 }

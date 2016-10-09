@@ -38,7 +38,6 @@ class PrescriptionDetailsViewController: UIViewController {
 //    var helloWorldTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("isPressureLoaded"), userInfo: nil, repeats: true)
 
     
-    
     override func viewWillAppear(animated: Bool) {
         self.dockimage.hidden = true
         self.nameLabel.text = passedPrescription.name
@@ -87,7 +86,7 @@ class PrescriptionDetailsViewController: UIViewController {
                 if let JSON = response.result.value {
                     let response = JSON as! NSDictionary
                     let totalResponse = response["feeds"] as! [NSDictionary]
-                    for i in 1...5 {
+                    for i in 1...2 {
                         var tempDict = totalResponse[totalResponse.count - i]
                         print(tempDict)
     //                    print(tempDict["field1"])
