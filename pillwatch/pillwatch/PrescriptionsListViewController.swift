@@ -47,7 +47,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 
         //Template Info
         let templatePrescription = Prescription(name: "Naproxen", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
-        let templatePrescription2 = Prescription(name: "Warfarin", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 6)
+        let templatePrescription2 = Prescription(name: "Zolpidem", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 6)
         templatePrescription.takeDose()
         
         var testArray = [templatePrescription, templatePrescription2]
@@ -89,6 +89,8 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         var cellPrescriptionItem = prescriptionsList![indexPath.row]
         
         cell.nameLabel.text = cellPrescriptionItem.name!
+        var medication = getMedicationItem(cellPrescriptionItem.name!)
+
         
         let calendar = NSCalendar.currentCalendar()
 //        let components = calendar.component(.Hour | .Minute, fromDate: cellPrescriptionItem.firstTimeTaken)
@@ -103,6 +105,13 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         cell.dayLabel.text = String(newTime.day())
         
         cell.countLabel.text = formatCount(cellPrescriptionItem.remainingCount!, totalCount: cellPrescriptionItem.totalCount!)
+        
+        if(medication != nil) {
+            var medicationColor = "pill-" + String(medication!["color"]!)
+            print(medicationColor)
+            cell.pillColorImage.image = UIImage(named: medicationColor)
+//        cell.pillColorImage = UIImage(named: "pill-")
+        }
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         

@@ -277,7 +277,7 @@
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-8K-dPX">
                                                     <rect key="frame" x="10" y="8" width="354" height="91"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-EA-4eF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-blue" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-EA-4eF">
                                                             <rect key="frame" x="113" y="54" width="23" height="23"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meow Mix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-o5-4My">
@@ -328,6 +328,7 @@
                                             <outlet property="iconImage" destination="fA0-EA-4eF" id="km4-Dz-xRe"/>
                                             <outlet property="monthLabel" destination="rVV-Ix-BT1" id="8OA-eF-lAx"/>
                                             <outlet property="nameLabel" destination="lpP-o5-4My" id="mXK-me-Kv6"/>
+                                            <outlet property="pillColorImage" destination="fA0-EA-4eF" id="n5L-oj-tuY"/>
                                             <outlet property="timeLabel" destination="IGX-pw-q7i" id="MuB-fd-4Zv"/>
                                             <segue destination="gjv-li-XGG" kind="show" identifier="detailSegue" id="Vo5-BG-LCc"/>
                                         </connections>
@@ -647,6 +648,7 @@
         <image name="arrow-up" width="358" height="358"/>
         <image name="close" width="358" height="358"/>
         <image name="close-white" width="358" height="358"/>
+        <image name="pill-blue" width="181" height="278"/>
         <image name="pills_0000_Zoloft" width="686" height="1279"/>
         <image name="placeholder" width="640" height="640"/>
         <image name="plus" width="358" height="358"/>
