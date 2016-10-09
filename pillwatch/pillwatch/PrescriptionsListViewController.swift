@@ -18,6 +18,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
     var medicationList: JSON = []
     
     override func viewWillAppear(animated: Bool) {
+        prescriptionsList!.sortInPlace({ $0.nextTime!.isLessThanDate($1.nextTime!) })
         tableView.reloadData()
     }
     
@@ -46,11 +47,13 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         //Template Info
-        let templatePrescription = Prescription(name: "Naproxen", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
         let templatePrescription2 = Prescription(name: "Zolpidem", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 6)
+        let templatePrescription = Prescription(name: "Naproxen", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
+
         templatePrescription.takeDose()
         
-        var testArray = [templatePrescription, templatePrescription2]
+        var testArray = [templatePrescription2, templatePrescription]
+//        testArray.sortInPlace({ $0.nextTime!.isLessThanDate($1.nextTime!) })
         
         self.prescriptionsList = testArray
         
@@ -99,6 +102,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         var nextTime = String(cellPrescriptionItem.firstTimeTaken!.hour()) + ":" + String(cellPrescriptionItem.firstTimeTaken!.minute())
         
         var newTime = calculateNextDosageTime(cellPrescriptionItem.firstTimeTaken!, frequency: cellPrescriptionItem.frequencyInHours!, pillsTaken: cellPrescriptionItem.totalCount! - cellPrescriptionItem.remainingCount!, dosage: cellPrescriptionItem.itemsPerDosage!)
+        cellPrescriptionItem.nextTime = newTime
         
         cell.timeLabel.text = formatTime(newTime)
         cell.monthLabel.text = monthAbbreviations[newTime.month() - 1]
@@ -181,6 +185,7 @@ class Prescription {
     var firstTimeTaken: NSDate?
     var itemsPerDosage: Int?
     var frequencyInHours: Int?
+    var nextTime: NSDate?
     
     init(name: String, totalCount: Int, firstTimeTaken: NSDate, itemsPerDosage: Int, frequencyInHours: Int) {
         self.name = name
@@ -189,9 +194,11 @@ class Prescription {
         self.firstTimeTaken = firstTimeTaken
         self.itemsPerDosage = itemsPerDosage
         self.frequencyInHours = frequencyInHours
+        self.nextTime = firstTimeTaken
     }
     
     func takeDose() {
+        self.nextTime = self.firstTimeTaken!.dateByAddingTimeInterval(Double((self.totalCount! - self.remainingCount!) / self.itemsPerDosage!) * Double(self.frequencyInHours!) * 60.0 * 60)
         self.remainingCount! -= itemsPerDosage!
     }
 }
@@ -252,5 +259,18 @@ extension NSDate
         
         //Return Short Time String
         return timeString
+    }
+    
+    func isLessThanDate(dateToCompare: NSDate) -> Bool {
+        //Declare Variables
+        var isLess = false
+        
+        //Compare Values
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedAscending {
+            isLess = true
+        }
+        
+        //Return Result
+        return isLess
     }
 }

@@ -400,15 +400,15 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-Lw-S15" userLabel="DosageCountView">
                                         <rect key="frame" x="15" y="93" width="305" height="54"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-5F-LQQ">
-                                                <rect key="frame" x="12" y="6" width="41" height="41"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 pills" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-Sx-FTO">
                                                 <rect key="frame" x="61" y="12" width="230" height="29"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-5F-LQQ">
+                                                <rect key="frame" x="13" y="12" width="31" height="31"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -428,15 +428,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-j4-tpo" userLabel="FrequencyView">
                                 <rect key="frame" x="35" y="522" width="305" height="54"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6UA-s1-RAr">
-                                        <rect key="frame" x="12" y="6" width="41" height="41"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="every 24 hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-6W-CuZ">
                                         <rect key="frame" x="61" y="12" width="230" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="6UA-s1-RAr">
+                                        <rect key="frame" x="13" y="11" width="31" height="31"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -509,18 +509,17 @@
                                             <action selector="warningsPressed:" destination="gjv-li-XGG" eventType="touchUpInside" id="DXA-W7-baY"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-2f-voZ">
-                                        <rect key="frame" x="12" y="6" width="41" height="41"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warning &amp; Side Effects" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR0-WN-VRn">
                                         <rect key="frame" x="66" y="12" width="191" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Rrh-Ff-oKO">
-                                        <rect key="frame" x="265" y="5" width="27" height="41"/>
-                                        <color key="backgroundColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="Rrh-Ff-oKO">
+                                        <rect key="frame" x="278" y="17" width="11" height="19"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-2f-voZ">
+                                        <rect key="frame" x="17" y="12" width="31" height="31"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -659,11 +658,15 @@
     </scenes>
     <resources>
         <image name="arrow-up" width="358" height="358"/>
+        <image name="chevron-right" width="447" height="802"/>
+        <image name="clock" width="956" height="957"/>
         <image name="close" width="358" height="358"/>
         <image name="close-white" width="358" height="358"/>
+        <image name="pill" width="641" height="915"/>
         <image name="pill-blue" width="181" height="278"/>
         <image name="pill_bottle" width="797" height="1395"/>
         <image name="placeholder" width="640" height="640"/>
         <image name="plus" width="358" height="358"/>
+        <image name="warning" width="1174" height="947"/>
     </resources>
 </document>
