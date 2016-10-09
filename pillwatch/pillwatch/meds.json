@@ -1,0 +1,226 @@
+[
+  {
+    "generic": "Sertraline",
+    "brand name": "Zoloft",
+    "dose": "25mg",
+    "color": "green",
+    "link": "http://www.mayoclinic.org/drugs-supplements/sertraline-oral-route/precautions/drg-20065940"
+  },
+  {
+    "generic": "Warfarin",
+    "brand name": "Coumadin",
+    "dose": "4mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/warfarin-oral-route/precautions/drg-20070945"
+  },
+  {
+    "generic": "Levothyroxine",
+    "brand name": "Levoxyl",
+    "dose": "75mcg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/levothyroxine-oral-route/precautions/drg-20072133"
+  },
+  {
+    "generic": "Cyclobenzaprine",
+    "brand name": "Amrix",
+    "dose": "10mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/cyclobenzaprine-oral-route/precautions/drg-20063236"
+  },
+  {
+    "generic": "Lurasidone",
+    "brand name": "Latuda",
+    "dose": "80mg",
+    "color": "green",
+    "link": "http://www.mayoclinic.org/drugs-supplements/lurasidone-oral-route/precautions/drg-20074588"
+  },
+  {
+    "generic": "Aripiprazole",
+    "brand name": "Abilify",
+    "dose": "15mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/aripiprazole-oral-route/precautions/drg-20066890"
+  },
+  {
+    "generic": "Dextroamphetamine and Amphetamine",
+    "brand name": "Aderral",
+    "dose": "20mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/dextroamphetamine-and-amphetamine-oral-route/precautions/drg-20071758"
+  },
+  {
+    "generic": "Clonazepam",
+    "brand name": "KlonoPIN",
+    "dose": "0.5mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/clonazepam-oral-route/precautions/drg-20072102"
+  },
+  {
+    "generic": "Rosuvastatin",
+    "brand name": "Crestor",
+    "dose": "5mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/rosuvastatin-oral-route/precautions/drg-20065889"
+  },
+  {
+    "generic": "Diazepam",
+    "brand name": "Valium",
+    "dose": "5mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/diazepam-oral-route/precautions/drg-20072333"
+  },
+  {
+    "generic": "Folic Acid",
+    "brand name": "null",
+    "dose": "1mg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/folic-acid-oral-route-injection-route/precautions/drg-20063897"
+  },
+  {
+    "generic": "Digoxin",
+    "brand name": "Lanoxin",
+    "dose": "125mcg",
+    "color": "yellow",
+    "link": "http://www.mayoclinic.org/drugs-supplements/digoxin-oral-route/precautions/drg-20072646"
+  },
+  {
+    "generic": "Lisinopril",
+    "brand name": "Prinivil",
+    "dose": "20mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/lisinopril-oral-route/precautions/drg-20069129"
+  },
+  {
+    "generic": "Aripiprazole",
+    "brand name": "Abilify",
+    "dose": "30mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/aripiprazole-oral-route/precautions/drg-20066890"
+  },
+  {
+    "generic": "Zolpidem",
+    "brand name": "Ambien",
+    "dose": "6.25mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/zolpidem-oral-route/precautions/drg-20061195"
+  },
+  {
+    "generic": "Amoxicillin",
+    "brand name": "Amoxil",
+    "dose": "400mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/amoxicillin-oral-route/precautions/drg-20075356"
+  },
+  {
+    "generic": "Benazepril",
+    "brand name": "Lotensin",
+    "dose": "20mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/benazepril-oral-route/precautions/drg-20069193"
+  },
+  {
+    "generic": "Bisoprolol",
+    "brand name": "Zebeta",
+    "dose": "5mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/bisoprolol-oral-route/precautions/drg-20071022"
+  },
+  {
+    "generic": "Erythromyocin",
+    "brand name": "Erythrocin",
+    "dose": "250mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/erythromycin-oral-route/precautions/drg-20075495"
+  },
+  {
+    "generic": "Hydralazine",
+    "brand name": "Apresoline",
+    "dose": "10mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/hydralazine-oral-route/precautions/drg-20064201"
+  },
+  {
+    "generic": "Lovastatin",
+    "brand name": "Altoprev",
+    "dose": "20mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/lovastatin-oral-route/precautions/drg-20069029"
+  },
+  {
+    "generic": "Metoprolol",
+    "brand name": "Lopressor",
+    "dose": "50mg",
+    "color": "pink",
+    "link": "http://www.mayoclinic.org/drugs-supplements/metoprolol-oral-route/precautions/drg-20071141"
+  },
+  {
+    "generic": "Cefuroxime",
+    "brand name": "Ceftin",
+    "dose": "500mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/cefuroxime-oral-route/precautions/drg-20073295"
+  },
+  {
+    "generic": "Glimepiride",
+    "brand name": "Amaryl",
+    "dose": "4mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/glimepiride-oral-route/precautions/drg-20072155"
+  },
+  {
+    "generic": "Naproxen",
+    "brand name": "Aflaxen",
+    "dose": "550mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/naproxen-oral-route/precautions/drg-20069820"
+  },
+  {
+    "generic": "Paroxetine",
+    "brand name": "Paxil",
+    "dose": "20mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/paroxetine-oral-route/precautions/drg-20067632"
+  },
+  {
+    "generic": "Sertraline",
+    "brand name": "Zoloft",
+    "dose": "50mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/sertraline-oral-route/precautions/drg-20065940"
+  },
+  {
+    "generic": "Sotalol",
+    "brand name": "Betapace",
+    "dose": "80mg",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/sotalol-oral-route/precautions/drg-20071203"
+  },
+  {
+    "generic": "Valacyclovir",
+    "brand name": "Valtrex",
+    "dose": "1g",
+    "color": "blue",
+    "link": "http://www.mayoclinic.org/drugs-supplements/valacyclovir-oral-route/precautions/drg-20066635"
+  },
+  {
+    "generic": "Gabapentin",
+    "brand name": "Gabarone",
+    "dose": "600mg",
+    "color": "green",
+    "link": "http://www.mayoclinic.org/drugs-supplements/gabapentin-oral-route/precautions/drg-20064011"
+  },
+  {
+    "generic": "Levothyroxine",
+    "brand name": "Levoxyl",
+    "dose": "88mcg",
+    "color": "green",
+    "link": "http://www.mayoclinic.org/drugs-supplements/levothyroxine-oral-route/precautions/drg-20072133"
+  },
+  {
+    "generic": "Risperidone",
+    "brand name": "Risperdal",
+    "dose": "4mg",
+    "color": "green",
+    "link": "http://www.mayoclinic.org/drugs-supplements/risperidone-oral-route/precautions/drg-20067189"
+  }
+]

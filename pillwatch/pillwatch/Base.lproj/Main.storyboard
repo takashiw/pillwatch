@@ -493,6 +493,12 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0M2-3a-9qk" userLabel="WarningsView">
                                 <rect key="frame" x="35" y="599" width="305" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mT4-RP-YbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="54"/>
+                                        <connections>
+                                            <action selector="warningsPressed:" destination="gjv-li-XGG" eventType="touchUpInside" id="DXA-W7-baY"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-2f-voZ">
                                         <rect key="frame" x="12" y="6" width="41" height="41"/>
                                     </imageView>
@@ -519,6 +525,7 @@
                         <outlet property="drugImageView" destination="Ljd-D8-w8I" id="RH2-ax-LQU"/>
                         <outlet property="dueDateLabel" destination="XIX-oo-vnK" id="ya7-9g-bQ9"/>
                         <outlet property="frequencyLabel" destination="Cx0-6W-CuZ" id="zw4-NI-B1S"/>
+                        <outlet property="gramsLabel" destination="Khd-Rp-b9q" id="Kdv-R2-SVs"/>
                         <outlet property="nameLabel" destination="Cez-15-M2Z" id="gR3-dP-NdN"/>
                         <outlet property="nameView" destination="Dp9-yY-EPZ" id="XgK-ku-kU6"/>
                         <outlet property="progressPillsView" destination="HiT-Ub-Q0f" id="CJO-Zn-MbI"/>

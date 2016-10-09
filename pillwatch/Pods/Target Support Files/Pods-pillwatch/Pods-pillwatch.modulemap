@@ -1,0 +1,6 @@
+framework module Pods_pillwatch {
+  umbrella header "Pods-pillwatch-umbrella.h"
+
+  export *
+  module * { export * }
+}

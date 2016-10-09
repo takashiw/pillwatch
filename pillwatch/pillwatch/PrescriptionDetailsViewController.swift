@@ -13,6 +13,7 @@ class PrescriptionDetailsViewController: UIViewController {
     var passedPrescription: Prescription!
 
     @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var gramsLabel: UILabel!
     @IBOutlet weak var doseView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var remainingLabel: UILabel!
@@ -22,6 +23,9 @@ class PrescriptionDetailsViewController: UIViewController {
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var drugImageView: UIImageView!
     @IBOutlet weak var progressPillsView: UIView!
+    var listedViewController: PrescriptionsListViewController?
+    var medicationDetails: [String:String]? = [:]
+    var warningsURL: NSURL?
     
     override func viewWillAppear(animated: Bool) {
         self.nameLabel.text = passedPrescription.name
@@ -42,6 +46,13 @@ class PrescriptionDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        medicationDetails = (listedViewController?.getMedicationItem(passedPrescription.name!))!
+        print(medicationDetails)
+        if(medicationDetails != nil){
+            self.gramsLabel.text = String(medicationDetails!["dose"]!)
+            self.warningsURL = NSURL(string: String(medicationDetails!["link"]!))
+        }
+        
         self.nameView.layer.cornerRadius = 4
         
         self.nameView.layer.shadowColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0).CGColor
@@ -63,6 +74,12 @@ class PrescriptionDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func warningsPressed(sender: AnyObject) {
+        if(self.warningsURL != nil){
+            UIApplication.sharedApplication().openURL(self.warningsURL!)
+        }
+        
+    }
 
     // MARK: - Navigation
 

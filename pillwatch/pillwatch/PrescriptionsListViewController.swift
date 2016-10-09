@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -14,6 +15,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
     
     var prescriptionsList: [Prescription]?
     var monthAbbreviations: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var medicationList: JSON = []
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
@@ -25,13 +27,27 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         tableView.dataSource = self
         tableView.delegate = self
         
+        if let path : String = NSBundle.mainBundle().pathForResource("meds", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                
+                let json = JSON(data: data)
+                print(json)
+                self.medicationList = json
+            }
+        }
+        
+//        if let array = arrCountry.arrayObject as? [[String:String]],
+////            foundItem = array.filter({ $0["name"] == "def"}).first {
+////            print(foundItem)
+//        }
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0)
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         //Template Info
-        let templatePrescription = Prescription(name: "Advil", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
-        let templatePrescription2 = Prescription(name: "Aleve", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 6)
+        let templatePrescription = Prescription(name: "Naproxen", totalCount: 20, firstTimeTaken: NSDate(), itemsPerDosage: 2, frequencyInHours: 24)
+        let templatePrescription2 = Prescription(name: "Warfarin", totalCount: 30, firstTimeTaken: NSDate(), itemsPerDosage: 1, frequencyInHours: 6)
         templatePrescription.takeDose()
         
         var testArray = [templatePrescription, templatePrescription2]
@@ -45,6 +61,17 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getMedicationItem(key: String) -> [String:String]? {
+        if(medicationList != nil){
+            if let array = medicationList.arrayObject as? [[String:String]],
+                foundItem = array.filter({ $0["generic"] == key}).first {
+                print(foundItem)
+                return foundItem
+            }
+        }
+        return nil
     }
     
     // MARK: Table View Controls
@@ -125,6 +152,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
             var vc = segue.destinationViewController as! PrescriptionDetailsViewController
             var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             
+            vc.listedViewController = self
             vc.passedPrescription = prescriptionsList![indexPath!.row]
         }
         if(segue.identifier == "addSegue"){
