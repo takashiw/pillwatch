@@ -15,6 +15,10 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
     var prescriptionsList: [Prescription]?
     var monthAbbreviations: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

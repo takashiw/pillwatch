@@ -296,6 +296,9 @@
                                 <state key="normal" title="Press to Complete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="completePressed:" destination="R8a-4A-2Bb" eventType="touchUpInside" id="yn5-kG-Ngt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please take 3 pills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca6-Sb-1x9">
                                 <rect key="frame" x="20" y="353" width="335" height="21"/>
@@ -323,6 +326,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="instructionLabel" destination="Ca6-Sb-1x9" id="Iwb-3V-z4J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oec-Xz-MBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

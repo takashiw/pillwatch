@@ -23,15 +23,14 @@ class PrescriptionDetailsViewController: UIViewController {
     @IBOutlet weak var drugImageView: UIImageView!
     @IBOutlet weak var progressPillsView: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
         self.nameLabel.text = passedPrescription.name
         self.remainingLabel.text = String(passedPrescription.remainingCount!)
         self.totalLabel.text = "/ " + String(passedPrescription.totalCount!)
         self.dosageLabel.text = String(passedPrescription.itemsPerDosage!) + " pills"
         self.frequencyLabel.text = "every " + String(passedPrescription.frequencyInHours!) + " hours"
         
-//        self.progressPillsView.frame = CGRect(x: 0, y: 0, width: self.progressPillsView.frame.width, height: self.progressPillsView.frame.height*0.4)
+        //        self.progressPillsView.frame = CGRect(x: 0, y: 0, width: self.progressPillsView.frame.width, height: self.progressPillsView.frame.height*0.4)
         
         self.progressPillsView.layer.anchorPoint = CGPointMake(0.5, 1)
         
@@ -39,6 +38,10 @@ class PrescriptionDetailsViewController: UIViewController {
         
         self.progressPillsView.transform = CGAffineTransformMakeScale(1, CGFloat(percentageUsed))
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         self.nameView.layer.cornerRadius = 4
         
         self.nameView.layer.shadowColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0).CGColor
@@ -68,6 +71,8 @@ class PrescriptionDetailsViewController: UIViewController {
         var vc = segue.destinationViewController as! DoseViewController
         
         vc.passedPrescription = self.passedPrescription
+        vc.detailViewController = self
+        
     }
 
 

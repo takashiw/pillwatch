@@ -11,11 +11,14 @@ import UIKit
 class DoseViewController: UIViewController {
     
     var passedPrescription: Prescription!
+    weak var detailViewController : PrescriptionDetailsViewController?
 
+    @IBOutlet weak var instructionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.instructionLabel.text = "Please take " + String(passedPrescription.itemsPerDosage!) + " pills"
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +32,12 @@ class DoseViewController: UIViewController {
         }
     }
 
+    @IBAction func completePressed(sender: AnyObject) {
+        if((self.presentingViewController) != nil){
+            passedPrescription.takeDose()
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
     /*
     // MARK: - Navigation
 
