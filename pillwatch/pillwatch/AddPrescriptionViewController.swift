@@ -8,11 +8,15 @@
 
 import UIKit
 
-class AddPrescriptionViewController: UIViewController {
+class AddPrescriptionViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dosageButton: UIButton!
+    @IBOutlet weak var totalButton: UIButton!
     @IBOutlet weak var frequencyButton: UIButton!
+    var listViewController: PrescriptionsListViewController?
     var dosageCount: Int = 0
+    var totalCount: Int = 0
     var frequencyCount: Int = 0
     
     override func viewDidLoad() {
@@ -21,11 +25,43 @@ class AddPrescriptionViewController: UIViewController {
         self.dosageButton.adjustsImageWhenHighlighted = false
 
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        self.nameTextField.delegate = self
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.frequencyButton.setTitle(String(frequencyCount) + " hours", forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func completePressed(sender: AnyObject) {
+        if((self.presentingViewController) != nil){
+            
+            listViewController?.prescriptionsList?.append(PrescriptionFactory())
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
+    func PrescriptionFactory() -> Prescription{
+        let name = self.nameTextField.text
+        let dateTime = NSDate()
+        return Prescription(name: name!, totalCount: self.totalCount, firstTimeTaken: dateTime, itemsPerDosage: self.dosageCount, frequencyInHours: self.frequencyCount)
     }
     
     @IBAction func cancelPressed(sender: AnyObject) {
@@ -49,28 +85,26 @@ class AddPrescriptionViewController: UIViewController {
             self.dosageButton.setTitle(String(dosageCount), forState: .Normal)
         }
     }
-    @IBAction func frequencyButtonIncrease(sender: AnyObject) {
-        self.frequencyCount += 1
-        self.frequencyButton.setTitle(String(frequencyCount), forState: .Normal)
+    @IBAction func totalButtonIncrease(sender: AnyObject) {
+        self.totalCount += 1
+        self.totalButton.setTitle(String(totalCount), forState: .Normal)
     }
-    @IBAction func frequencyButtonDecrease(sender: AnyObject) {
-        if(self.frequencyCount > 0){
-            self.frequencyCount -= 1
+    @IBAction func totalButtonDecrease(sender: AnyObject) {
+        if(self.totalCount > 0){
+            self.totalCount -= 1
         }
-        if(frequencyCount == 0){
-            self.frequencyButton.setTitle("+", forState: .Normal)
+        if(totalCount == 0){
+            self.totalButton.setTitle("+", forState: .Normal)
         } else {
-            self.frequencyButton.setTitle(String(frequencyCount), forState: .Normal)
+            self.totalButton.setTitle(String(totalCount), forState: .Normal)
         }
     }
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var vc = segue.destinationViewController as! FrequencyViewController
+        
+        vc.addingViewController = self
     }
-    */
-
 }

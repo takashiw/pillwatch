@@ -24,11 +24,6 @@
                                     <action selector="cancelPressed:" destination="0gS-YT-vvm" eventType="touchUpInside" id="UqM-rE-hE8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="medication name" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-OZ-KGo">
-                                <rect key="frame" x="20" y="104" width="335" height="30"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="29"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pills per dose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukc-WD-34A">
                                 <rect key="frame" x="20" y="185" width="162" height="39"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
@@ -73,7 +68,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="frequencyButtonIncrease:" destination="0gS-YT-vvm" eventType="touchUpInside" id="AsK-6G-7vp"/>
+                                    <action selector="totalButtonIncrease:" destination="0gS-YT-vvm" eventType="touchUpInside" id="nkU-ed-a9n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNN-uc-3gi">
@@ -85,7 +80,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="frequencyButtonDecrease:" destination="0gS-YT-vvm" eventType="touchUpInside" id="EgQ-dl-rY7"/>
+                                    <action selector="totalButtonDecrease:" destination="0gS-YT-vvm" eventType="touchUpInside" id="5BO-DU-nFa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAY-LG-3e3">
@@ -97,6 +92,7 @@
                                 </state>
                                 <connections>
                                     <action selector="completePressed:" destination="R8a-4A-2Bb" eventType="touchUpInside" id="Olg-OK-VzF"/>
+                                    <action selector="completePressed:" destination="0gS-YT-vvm" eventType="touchUpInside" id="TfW-zY-UYD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequency of Dose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2O-5A-QXA">
@@ -112,19 +108,147 @@
                                 <state key="normal" title="12 hours">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tGU-pk-VEs" kind="showDetail" id="M5J-aH-vwa"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="medication name" textAlignment="natural" minimumFontSize="26" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FKN-OZ-KGo">
+                                <rect key="frame" x="20" y="91" width="335" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dosageButton" destination="NNW-i2-Wb4" id="9QP-oW-FO3"/>
-                        <outlet property="frequencyButton" destination="s7j-S5-0J2" id="leC-tQ-z9V"/>
+                        <outlet property="frequencyButton" destination="epi-Nj-4o8" id="COu-Vb-BNC"/>
+                        <outlet property="nameTextField" destination="FKN-OZ-KGo" id="imn-Jq-LtZ"/>
+                        <outlet property="totalButton" destination="s7j-S5-0J2" id="SMd-TL-2bo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dc4-gW-huC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887.5" y="-365.5"/>
+        </scene>
+        <!--Frequency View Controller-->
+        <scene sceneID="O6P-8j-Qmb">
+            <objects>
+                <viewController id="tGU-pk-VEs" customClass="FrequencyViewController" customModule="pillwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TK4-gx-rlQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gmx-Lw-WMK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nuR-xm-wus">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequency of Dose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSw-2i-m1C">
+                                <rect key="frame" x="20" y="77" width="256" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Common Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-pd-sl1">
+                                <rect key="frame" x="20" y="298" width="256" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAG-er-1Jm">
+                                <rect key="frame" x="22" y="343" width="110" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Once A Day"/>
+                                <connections>
+                                    <action selector="oncePressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="sJY-XC-PiA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em6-nJ-dvK">
+                                <rect key="frame" x="130" y="343" width="110" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Twice A Day"/>
+                                <connections>
+                                    <action selector="twicePressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="mgC-4v-FoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNZ-us-K45">
+                                <rect key="frame" x="238" y="343" width="110" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Thrice A Day"/>
+                                <connections>
+                                    <action selector="thricePressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="zbO-ig-bTM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XJ-oM-BIH">
+                                <rect key="frame" x="291" y="162" width="59" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="plusPressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="en2-Cd-Hbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-mQ-0dw">
+                                <rect key="frame" x="243" y="174" width="34" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="minusPressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="Nvw-b9-kAk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I take medicine every" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7x-LG-r7V">
+                                <rect key="frame" x="20" y="171" width="220" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-cO-vNY">
+                                <rect key="frame" x="94" y="228" width="256" height="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-1Y-RCr">
+                                <rect key="frame" x="22" y="585" width="335" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <state key="normal" title="Press to Update">
+                                    <color key="titleColor" red="0.34460216030000002" green="0.62160663059999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="completePressed:" destination="R8a-4A-2Bb" eventType="touchUpInside" id="QWb-Nf-Fxc"/>
+                                    <action selector="completePressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="iCy-K0-Gyq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B3-J8-eKd">
+                                <rect key="frame" x="20" y="36" width="26" height="26"/>
+                                <state key="normal" image="close-white"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="0gS-YT-vvm" eventType="touchUpInside" id="cIZ-yn-SqZ"/>
+                                    <action selector="cancelPressed:" destination="tGU-pk-VEs" eventType="touchUpInside" id="wZS-Zz-1eC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34460216030000002" green="0.62160663059999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="frequencyButton" destination="1XJ-oM-BIH" id="cuf-0S-0j1"/>
+                        <outlet property="onceButton" destination="sAG-er-1Jm" id="E5S-DV-dcT"/>
+                        <outlet property="thriceButton" destination="eNZ-us-K45" id="VCe-C4-qr8"/>
+                        <outlet property="twiceButton" destination="em6-nJ-dvK" id="G4G-iJ-Pvq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgw-lr-L8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480.5" y="-399.5"/>
         </scene>
         <!--Prescriptions List View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -220,7 +344,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="plus"/>
                                 <connections>
-                                    <segue destination="0gS-YT-vvm" kind="showDetail" id="cP6-b8-xeR"/>
+                                    <segue destination="0gS-YT-vvm" kind="showDetail" identifier="addSegue" id="cP6-b8-xeR"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -515,6 +639,7 @@
     <resources>
         <image name="arrow-up" width="358" height="358"/>
         <image name="close" width="358" height="358"/>
+        <image name="close-white" width="358" height="358"/>
         <image name="pills_0000_Zoloft" width="686" height="1279"/>
         <image name="placeholder" width="640" height="640"/>
         <image name="plus" width="358" height="358"/>

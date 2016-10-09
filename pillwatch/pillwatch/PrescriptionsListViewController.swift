@@ -40,6 +40,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         
         self.tableView.reloadData()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -125,6 +126,11 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
             var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             
             vc.passedPrescription = prescriptionsList![indexPath!.row]
+        }
+        if(segue.identifier == "addSegue"){
+            var vc = segue.destinationViewController as! AddPrescriptionViewController
+            
+            vc.listViewController = self
         }
 //
     }
