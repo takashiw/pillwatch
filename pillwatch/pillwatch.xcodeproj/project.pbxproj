@@ -21,6 +21,7 @@
 		16D381151DAA251C00AA3C76 /* meds.json in Resources */ = {isa = PBXBuildFile; fileRef = 16D381141DAA251C00AA3C76 /* meds.json */; };
 		16D3811D1DAA958000AA3C76 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D3811C1DAA958000AA3C76 /* NameTableViewCell.swift */; };
 		16D381211DAA967500AA3C76 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D381201DAA967500AA3C76 /* NameViewController.swift */; };
+		16E7901A1DAAAC7E00EA3B8F /* pills6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 16E790191DAAAC7E00EA3B8F /* pills6.gif */; };
 		972DBCF9908780FA60504209 /* Pods_pillwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65460D95CB0ED2D47BD4BA52 /* Pods_pillwatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		16D381141DAA251C00AA3C76 /* meds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meds.json; sourceTree = "<group>"; };
 		16D3811C1DAA958000AA3C76 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameTableViewCell.swift; path = ../Pods/NameTableViewCell.swift; sourceTree = "<group>"; };
 		16D381201DAA967500AA3C76 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		16E790191DAAAC7E00EA3B8F /* pills6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pills6.gif; sourceTree = "<group>"; };
 		65460D95CB0ED2D47BD4BA52 /* Pods_pillwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pillwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		967551B9064343F5A01DE25F /* Pods-pillwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pillwatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pillwatch/Pods-pillwatch.debug.xcconfig"; sourceTree = "<group>"; };
 		988A5FB96E682DD55D2C8C5D /* Pods-pillwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pillwatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-pillwatch/Pods-pillwatch.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		16D380F31DA92FAC00AA3C76 /* pillwatch */ = {
 			isa = PBXGroup;
 			children = (
+				16E790191DAAAC7E00EA3B8F /* pills6.gif */,
 				16D381141DAA251C00AA3C76 /* meds.json */,
 				16D3810E1DA9BF2200AA3C76 /* DoseViewController.swift */,
 				16D380F41DA92FAC00AA3C76 /* AppDelegate.swift */,
@@ -181,6 +184,7 @@
 				16D380FC1DA92FAC00AA3C76 /* Assets.xcassets in Resources */,
 				16D381151DAA251C00AA3C76 /* meds.json in Resources */,
 				16D380FA1DA92FAC00AA3C76 /* Main.storyboard in Resources */,
+				16E7901A1DAAAC7E00EA3B8F /* pills6.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

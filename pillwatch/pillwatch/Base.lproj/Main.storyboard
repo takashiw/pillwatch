@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rjT-lp-R2W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tCf-Gq-neO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgw-lr-L8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619.5" y="-406.5"/>
+            <point key="canvasLocation" x="2749.5" y="-525.5"/>
         </scene>
         <!--Prescriptions List View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -661,9 +661,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="HIr-L2-UXH">
-                                <rect key="frame" x="20" y="84" width="335" height="234"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXp-ZG-CSw">
                                 <rect key="frame" x="20" y="549" width="335" height="62"/>
                                 <color key="backgroundColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -681,15 +678,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="DDq-qr-Fsu">
-                                <rect key="frame" x="145" y="395" width="85" height="70"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-VZ-eTl">
-                                <rect key="frame" x="39" y="395" width="85" height="70"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LW3-0a-kl3">
-                                <rect key="frame" x="251" y="395" width="85" height="70"/>
-                            </imageView>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-sJ-ehF">
                                 <rect key="frame" x="20" y="36" width="26" height="26"/>
                                 <state key="normal" title="X" image="close"/>
@@ -697,17 +685,106 @@
                                     <action selector="cancelPressed:" destination="R8a-4A-2Bb" eventType="touchUpInside" id="dF2-OK-PKx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-pink" translatesAutoresizingMaskIntoConstraints="NO" id="DDq-qr-Fsu">
+                                <rect key="frame" x="147" y="403" width="80" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-pink" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-VZ-eTl">
+                                <rect key="frame" x="41" y="403" width="80" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-pink" translatesAutoresizingMaskIntoConstraints="NO" id="Uyn-CP-5M1">
+                                <rect key="frame" x="200" y="403" width="80" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-pink" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-DQ-4Zy">
+                                <rect key="frame" x="94" y="403" width="80" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-pink" translatesAutoresizingMaskIntoConstraints="NO" id="LW3-0a-kl3">
+                                <rect key="frame" x="253" y="403" width="80" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="instructionLabel" destination="Ca6-Sb-1x9" id="Iwb-3V-z4J"/>
+                        <outlet property="pillImage1" destination="Drd-VZ-eTl" id="tKK-NH-cp4"/>
+                        <outlet property="pillImage2" destination="DDq-qr-Fsu" id="Lrk-qL-cbX"/>
+                        <outlet property="pillImage3" destination="LW3-0a-kl3" id="uVc-Pu-R9g"/>
+                        <outlet property="pillImage4" destination="NuB-DQ-4Zy" id="T79-68-uJ1"/>
+                        <outlet property="pillImage5" destination="Uyn-CP-5M1" id="a81-bI-BEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oec-Xz-MBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2678.5" y="382.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MVl-Un-Goq">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="tCf-Gq-neO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HL8-YV-Esb"/>
+                        <viewControllerLayoutGuide type="bottom" id="fP5-71-d9k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="04A-UQ-sde">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MediDock" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-P1-v8y">
+                                <rect key="frame" x="32" y="20" width="310" height="165"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSd-Lv-9z0">
+                                <rect key="frame" x="20" y="573" width="335" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <state key="normal" title="I agree and wish to continue">
+                                    <color key="titleColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="completePressed:" destination="0gS-YT-vvm" eventType="touchUpInside" id="7Me-hA-nXr"/>
+                                    <action selector="completePressed:" destination="R8a-4A-2Bb" eventType="touchUpInside" id="w3c-rs-Z5f"/>
+                                    <segue destination="rjT-lp-R2W" kind="presentation" id="SmZ-DN-77R"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-Cr-Hpd">
+                                <rect key="frame" x="26" y="149" width="323" height="353"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disclaimer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-ko-nJR">
+                                        <rect key="frame" x="17" y="7" width="127" height="38"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-jV-VwN">
+                                        <rect key="frame" x="17" y="48" width="289" height="112"/>
+                                        <string key="text">This mobile app is intended for informational, educational and research purposes only. It is not, and is not intended, for use in the diagnosis of disease or other conditions, or in the cure, mitigation, treatment, or prevention of disease, in man or other animals. Health care providers should exercise their own independent clinical judgment when using the mobile app in conjunction with patient care.</string>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE5-Cm-QIL">
+                                        <rect key="frame" x="17" y="193" width="289" height="146"/>
+                                        <mutableString key="text">This mobile app is provided for informational, educational and research purposes only. By using any of this material, you assume all risks of copyright infringement and related liability. Note this mobile app may contain copyrighted work created under contract with government agencies, foundations, funding organizations and commercial companies, etc. If the app owners place further restrictions on the material, you must honor those restrictions regardless of whether such restrictions are described in this mobile app.</mutableString>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms of Use" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY4-EL-x0W">
+                                        <rect key="frame" x="17" y="161" width="127" height="38"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyc-sC-9Za" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289.5" y="-230.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vSZ-QS-DOe">
@@ -729,6 +806,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MediDock" width="1429" height="953"/>
         <image name="arrow-up" width="358" height="358"/>
         <image name="base" width="1191" height="248"/>
         <image name="chevron-right" width="447" height="802"/>
@@ -737,8 +815,8 @@
         <image name="close-white" width="358" height="358"/>
         <image name="pill" width="641" height="915"/>
         <image name="pill-blue" width="181" height="278"/>
+        <image name="pill-pink" width="185" height="185"/>
         <image name="pill_bottle" width="797" height="1395"/>
-        <image name="placeholder" width="640" height="640"/>
         <image name="plus" width="358" height="358"/>
         <image name="warning" width="1204" height="996"/>
     </resources>

@@ -5,4 +5,7 @@ use_frameworks!
 target 'pillwatch' do
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 3.x'
+    pod 'Gifu'
+    pod 'SwiftGifOrigin'
+
 end
