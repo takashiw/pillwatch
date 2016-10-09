@@ -290,20 +290,20 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="99" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-3F-LDm">
-                                                                    <rect key="frame" x="13" y="8" width="72" height="37.5"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-Ix-BT1">
-                                                                    <rect key="frame" x="9" y="43.5" width="81" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                                    <rect key="frame" x="14" y="53" width="72" height="37.5"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7:30pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGX-pw-q7i">
-                                                                    <rect key="frame" x="9" y="62.5" width="81" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                                    <rect key="frame" x="10" y="15" width="81" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-Ix-BT1">
+                                                                    <rect key="frame" x="9" y="40" width="81" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -372,6 +372,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiT-Ub-Q0f">
+                                <rect key="frame" x="73" y="274" width="63" height="110"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dp9-yY-EPZ">
                                 <rect key="frame" x="20" y="82" width="335" height="77"/>
                                 <subviews>
@@ -416,8 +420,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="due by 7:30pm today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIX-oo-vnK">
-                                <rect key="frame" x="72" y="423" width="230" height="27"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                <rect key="frame" x="72" y="425" width="230" height="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.3495408538" green="0.6243999938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -461,13 +465,18 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8v-Dk-h2P" userLabel="AlertView">
                                 <rect key="frame" x="183" y="291" width="150" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="good to go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-GD-6pV">
+                                        <rect key="frame" x="22" y="7" width="107" height="29"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiT-Ub-Q0f">
-                                <rect key="frame" x="76" y="274" width="59" height="114"/>
-                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pills_0000_Zoloft" translatesAutoresizingMaskIntoConstraints="NO" id="Ljd-D8-w8I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill_bottle" translatesAutoresizingMaskIntoConstraints="NO" id="Ljd-D8-w8I">
                                 <rect key="frame" x="42" y="185" width="124" height="147"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajC-My-6NJ">
@@ -516,6 +525,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill-blue" translatesAutoresizingMaskIntoConstraints="NO" id="VrF-5d-5ld">
+                                <rect key="frame" x="87" y="241" width="34" height="36"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9223006226491498" green="0.95854666747046613" blue="0.99189911912751683" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -529,6 +541,7 @@
                         <outlet property="gramsLabel" destination="Khd-Rp-b9q" id="Kdv-R2-SVs"/>
                         <outlet property="nameLabel" destination="Cez-15-M2Z" id="gR3-dP-NdN"/>
                         <outlet property="nameView" destination="Dp9-yY-EPZ" id="XgK-ku-kU6"/>
+                        <outlet property="pillImage" destination="VrF-5d-5ld" id="bdR-If-i5j"/>
                         <outlet property="progressPillsView" destination="HiT-Ub-Q0f" id="CJO-Zn-MbI"/>
                         <outlet property="remainingLabel" destination="zan-6B-Thl" id="KQy-CC-BOs"/>
                         <outlet property="totalLabel" destination="t0Q-F9-2Ke" id="czs-ps-85m"/>
@@ -649,7 +662,7 @@
         <image name="close" width="358" height="358"/>
         <image name="close-white" width="358" height="358"/>
         <image name="pill-blue" width="181" height="278"/>
-        <image name="pills_0000_Zoloft" width="686" height="1279"/>
+        <image name="pill_bottle" width="797" height="1395"/>
         <image name="placeholder" width="640" height="640"/>
         <image name="plus" width="358" height="358"/>
     </resources>

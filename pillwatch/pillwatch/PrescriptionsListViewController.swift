@@ -98,7 +98,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         
         var nextTime = String(cellPrescriptionItem.firstTimeTaken!.hour()) + ":" + String(cellPrescriptionItem.firstTimeTaken!.minute())
         
-        var newTime = calculateNextDosageTime(cellPrescriptionItem.firstTimeTaken!, frequency: cellPrescriptionItem.frequencyInHours!, pillsTaken: cellPrescriptionItem.totalCount! - cellPrescriptionItem.remainingCount!)
+        var newTime = calculateNextDosageTime(cellPrescriptionItem.firstTimeTaken!, frequency: cellPrescriptionItem.frequencyInHours!, pillsTaken: cellPrescriptionItem.totalCount! - cellPrescriptionItem.remainingCount!, dosage: cellPrescriptionItem.itemsPerDosage!)
         
         cell.timeLabel.text = formatTime(newTime)
         cell.monthLabel.text = monthAbbreviations[newTime.month() - 1]
@@ -145,9 +145,9 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
         return String(intTime)
     }
     
-    func calculateNextDosageTime(firstTime: NSDate, frequency: Int, pillsTaken: Int) -> NSDate{
+    func calculateNextDosageTime(firstTime: NSDate, frequency: Int, pillsTaken: Int, dosage: Int) -> NSDate{
         print(firstTime)
-        var newDate = firstTime.dateByAddingTimeInterval(Double(frequency) * 60.0 * 60)
+        let newDate = firstTime.dateByAddingTimeInterval(Double(pillsTaken / dosage) * Double(frequency) * 60.0 * 60)
         print(newDate)
         return newDate
     }

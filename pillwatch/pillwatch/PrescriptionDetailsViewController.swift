@@ -23,9 +23,13 @@ class PrescriptionDetailsViewController: UIViewController {
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var drugImageView: UIImageView!
     @IBOutlet weak var progressPillsView: UIView!
+    @IBOutlet weak var pillImage: UIImageView!
+
     var listedViewController: PrescriptionsListViewController?
     var medicationDetails: [String:String]? = [:]
     var warningsURL: NSURL?
+    var monthsFull: [String] = ["January", "Februaru", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
     
     override func viewWillAppear(animated: Bool) {
         self.nameLabel.text = passedPrescription.name
@@ -41,7 +45,26 @@ class PrescriptionDetailsViewController: UIViewController {
         var percentageUsed = Double(passedPrescription.remainingCount!) / Double(passedPrescription.totalCount!)
         
         self.progressPillsView.transform = CGAffineTransformMakeScale(1, CGFloat(percentageUsed))
+        var newTime = listedViewController!.calculateNextDosageTime(passedPrescription.firstTimeTaken!, frequency: passedPrescription.frequencyInHours!, pillsTaken: passedPrescription.totalCount! - passedPrescription.remainingCount!, dosage: passedPrescription.itemsPerDosage!)
+        self.dueDateLabel.text = formatTime()
         
+    }
+    
+    func formatTime() -> String{
+        var newTime = listedViewController!.calculateNextDosageTime(passedPrescription.firstTimeTaken!, frequency: passedPrescription.frequencyInHours!, pillsTaken: passedPrescription.totalCount! - passedPrescription.remainingCount!, dosage: passedPrescription.itemsPerDosage!)
+        var current = NSDate()
+        var newMonth = newTime.month()
+        var newDay = newTime.day()
+        var dayText = ", " + monthsFull[newTime.month() - 1] + " " + String(newTime.day())
+        
+        if(newMonth == current.month()){
+            if(newDay == current.day()){
+                dayText = " today"
+            } else if(newDay == current.day() + 1){
+                dayText = " tomorrow"
+            }
+        }
+        return "due by " + listedViewController!.formatTime(newTime) + dayText
     }
     
     override func viewDidLoad() {
@@ -49,8 +72,10 @@ class PrescriptionDetailsViewController: UIViewController {
         medicationDetails = (listedViewController?.getMedicationItem(passedPrescription.name!))!
         print(medicationDetails)
         if(medicationDetails != nil){
-            self.gramsLabel.text = String(medicationDetails!["dose"]!)
+            self.gramsLabel.text = String(medicationDetails!["brand name"]!) + " | " + String(medicationDetails!["dose"]!)
             self.warningsURL = NSURL(string: String(medicationDetails!["link"]!))
+            var medicationColor = "pill-" + String(medicationDetails!["color"]!)
+            self.pillImage.image = UIImage(named: medicationColor)
         }
         
         self.nameView.layer.cornerRadius = 4
