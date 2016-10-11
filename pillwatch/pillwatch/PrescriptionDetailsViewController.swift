@@ -123,6 +123,8 @@ class PrescriptionDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         medicationDetails = (listedViewController?.getMedicationItem(passedPrescription.name!))!
         print(medicationDetails)
@@ -174,6 +176,9 @@ class PrescriptionDetailsViewController: UIViewController {
         
     }
 
+    @IBAction func refreshPressed(sender: AnyObject) {
+        isPressureLoaded()
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

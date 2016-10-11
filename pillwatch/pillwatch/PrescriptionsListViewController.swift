@@ -13,7 +13,6 @@ import Alamofire
 class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
     var prescriptionsList: [Prescription]?
     var monthAbbreviations: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var medicationList: JSON = []
@@ -25,6 +24,7 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -44,6 +44,9 @@ class PrescriptionsListViewController: UIViewController, UITableViewDelegate, UI
 //        }
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0)
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red:0.42, green:0.69, blue:1.00, alpha:1.0)
+        
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
